@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
 import ReactDOM from 'react-dom'; 
-// import event from './Event'; 
-import StatlesComponent from './StatlesComponent'; 
+import App from './ConfigurationComponent'
 
 
-ReactDOM.render(<StatlesComponent /> , document.getElementById('root'));
+ReactDOM.render(<App /> , document.getElementById('root'));
 
 

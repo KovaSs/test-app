@@ -1,18 +1,19 @@
-import React from 'react';
+import React from 'react'
+import {List, todos} from './ComponentComposition/List'
+import ListItem from './ComponentComposition/ListItem'
+import Section from './ComponentComposition/Section'
 
-const EmailTable = props => {
-  console.log('---',props)
-  let tableItems = props.emails.map( item => (
-    <tr key = {item.id}>
-      <td>{item.name}</td>
-      <td>{item.email}</td>
-    </tr>
-  ))
+const App = () => (
+  <div>
+    <List items={todos}>
+    {items => items.map((item, index) => 
+      <ListItem key={index}>{item}</ListItem>
+      )}
+    </List>
+    <Section title='Заголовок!'>
+    {(isHidden) => isHidden ? null : <p>Consectetur deserunt aliqua labore ullamco sit. Cillum reprehenderit quis sint consectetur velit ea occaecat minim reprehenderit. Anim ullamco cupidatat ex eu deserunt velit.</p>}
+    </Section>
+  </div>
+)
 
-  return (
-    <table>{tableItems}</table>
-  )
-}
-
-
-export default EmailTable;
+export default App
