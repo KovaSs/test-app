@@ -52,3 +52,16 @@
   border-radius: 0;
   border-bottom: 1px solid #38BB6C;
 }
+
+.loader {
+  margin: 0 auto;
+  width: 125px;
+}
+
+/* .button-inline {
+  border: 1px solid black;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #38BB6C;
+  color: #fff;
+} */
